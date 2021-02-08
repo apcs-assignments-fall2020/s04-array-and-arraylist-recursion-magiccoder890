@@ -5,7 +5,18 @@ public class MyMain {
     // Wrapper method
     public static boolean isSorted(ArrayList<Integer> list) {
         // YOUR CODE HERE
-        return false;
+        int num = 0;
+        for (int counter = 1; counter < list.size();counter ++){
+            if (list.get(counter) - list.get(counter - 1) >= 0){
+                num++;
+            }
+        }
+        if (num == list.size() - 1){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     // This recursive method checks if the array is sorted in 
@@ -20,7 +31,17 @@ public class MyMain {
      // Wrapper method
     public static boolean hasCountCopies(int[] arr, int x, int count) {
         // YOUR CODE HERE
-        return false;
+        for (int i = 0; i < arr.length; i ++){
+            if (arr[i] == x){
+                count --;
+            }
+        }
+        if (count == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     // This recursive method checks if the array contains exactly
@@ -36,7 +57,14 @@ public class MyMain {
     // Wrapper method
     public static boolean binarySearch(int[] arr, int num) {
         // YOUR CODE HERE
-        return false;
+        boolean test = false; 
+        for (int element : arr) { 
+            if (element == num) { 
+                test = true; 
+                break; 
+            } 
+        } 
+        return test;
     }
 
     // This recursive method calls binary search on the array
